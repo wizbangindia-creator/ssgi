@@ -533,32 +533,32 @@ export const researchLabs = [
   {
     title: "IBM Centre of Excellence",
     detail: "An industry-integrated lab for AI, Machine Learning, Cloud & Cyber Security — delivered in partnership with IBM.",
-    image: "https://www.srisaigroup.in/images/hslider/ibm31.png",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Pharmacy Research Lab",
     detail: "Advanced instrumentation for pharmaceutical analysis, formulation, medicinal chemistry and pharmacology research.",
-    image: "https://www.srisaigroup.in/images/hslider/new4c.jpg",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Mechanical Workshop",
     detail: "State-of-the-art machining, welding, CNC, fluid mechanics and thermal engineering labs for hands-on learning.",
-    image: "https://www.srisaigroup.in/images/hslider/new3c.jpg",
+    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Civil Engineering Labs",
     detail: "Soil mechanics, concrete technology, surveying, structural engineering and geotechnical research facilities.",
-    image: "https://www.srisaigroup.in/images/hslider/tm2.jpg",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Pearson VUE Testing Centre",
     detail: "On-campus authorized testing centre for globally recognized professional & academic certifications.",
-    image: "https://www.srisaigroup.in/images/hslider/new2c.jpg",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Electronics & Comm. Lab",
     detail: "Analog, digital, VLSI, embedded systems, communication and signal-processing laboratories.",
-    image: "https://www.srisaigroup.in/images/hslider/d.jpg",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=70",
   },
 ];
 

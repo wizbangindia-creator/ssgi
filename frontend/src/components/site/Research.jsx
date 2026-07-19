@@ -67,13 +67,26 @@ const Research = () => {
           {researchLabs.map((lab, i) => {
             const Icon = labIcons[i % labIcons.length];
             return (
-              <div key={lab.title} className="group rounded-xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-shadow">
-                <Placeholder
-                  icon={Icon}
-                  label={lab.title}
-                  className="w-full aspect-[16/10]"
-                  rounded="rounded-none"
-                />
+              <div key={lab.title} className="group rounded-xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl hover:-translate-y-0.5 transition-all" data-testid={`research-lab-${i}`}>
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-100">
+                  {lab.image ? (
+                    <>
+                      <img
+                        src={lab.image}
+                        alt={lab.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                        onError={(e) => { e.currentTarget.style.display = "none"; }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
+                      <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-red-600 text-white text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full shadow-md">
+                        <Icon className="w-3 h-3" /> Research
+                      </div>
+                    </>
+                  ) : (
+                    <Placeholder icon={Icon} label={lab.title} className="w-full h-full" rounded="rounded-none" />
+                  )}
+                </div>
                 <div className="p-4 md:p-5">
                   <h3 className="font-extrabold text-base md:text-lg text-slate-900 group-hover:text-red-700 transition-colors">{lab.title}</h3>
                   <p className="mt-2 text-xs md:text-sm text-slate-600 leading-relaxed">{lab.detail}</p>
