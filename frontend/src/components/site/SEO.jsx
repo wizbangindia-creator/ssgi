@@ -27,7 +27,10 @@ const structuredData = {
     availableLanguage: ["English", "Hindi", "Punjabi"],
   },
   sameAs: [
-    "https://www.facebook.com/ssgipathankot",
+    "https://www.facebook.com/ssgipathankot/",
+    "https://www.instagram.com/ssgipathankot",
+    "https://www.linkedin.com/school/srisaigroup",
+    "https://www.youtube.com/@ssgipathankot",
   ],
 };
 

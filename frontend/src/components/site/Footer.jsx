@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { contactInfo, megaNav, brand } from "@/mock";
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Twitter, Linkedin } from "lucide-react";
+import { contactInfo, megaNav, brand, socialLinks } from "@/mock";
+import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+
+const SOCIAL_ICON = { facebook: Facebook, instagram: Instagram, linkedin: Linkedin, youtube: Youtube };
 
 const Footer = () => (
   <footer id="contact" className="bg-slate-950 text-slate-300">
@@ -17,11 +19,22 @@ const Footer = () => (
             with its mega campus at Pathankot, Punjab and Sri Sai University at Palampur, Himachal Pradesh.
           </p>
           <div className="flex gap-2 mt-5">
-            {[Facebook, Twitter, Linkedin, Instagram, Youtube].map((Icon, i) => (
-              <a key={i} href="#" aria-label="social" className="w-9 h-9 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center transition-colors">
-                <Icon className="w-4 h-4 text-white" />
-              </a>
-            ))}
+            {socialLinks.map((s) => {
+              const Icon = SOCIAL_ICON[s.platform];
+              return (
+                <a
+                  key={s.platform}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={s.label}
+                  className={`w-9 h-9 rounded-full bg-white/10 ${s.hoverColor} flex items-center justify-center transition-colors`}
+                  data-testid={`footer-social-${s.platform}`}
+                >
+                  <Icon className="w-4 h-4 text-white" />
+                </a>
+              );
+            })}
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/site/PageLayout";
-import { contactInfo } from "@/mock";
+import { contactInfo, socialLinks } from "@/mock";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,7 +16,6 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Twitter,
   Linkedin,
   Building2,
   GraduationCap,
@@ -28,6 +27,8 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+
+const SOCIAL_ICON = { facebook: Facebook, instagram: Instagram, linkedin: Linkedin, youtube: Youtube };
 
 const departments = [
   { icon: GraduationCap, name: "Admissions Cell",       phone: contactInfo.helpline, email: "admissions@srisaigroup.in", hours: "9 am – 6 pm, Mon–Sat" },
@@ -180,17 +181,22 @@ const Contact = () => {
             <div className="mt-6">
               <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-3">Follow Us</div>
               <div className="flex flex-wrap gap-3">
-                {[
-                  { icon: Facebook,  label: "Facebook",  href: "https://facebook.com/srisaigroup",  color: "hover:bg-blue-600" },
-                  { icon: Instagram, label: "Instagram", href: "https://instagram.com/srisaigroup", color: "hover:bg-pink-600" },
-                  { icon: Youtube,   label: "YouTube",   href: "https://youtube.com/srisaigroup",   color: "hover:bg-red-600" },
-                  { icon: Twitter,   label: "Twitter",   href: "https://twitter.com/srisaigroup",   color: "hover:bg-sky-500" },
-                  { icon: Linkedin,  label: "LinkedIn",  href: "https://linkedin.com/school/srisaigroup", color: "hover:bg-blue-700" },
-                ].map((s) => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className={`w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-600 flex items-center justify-center hover:text-white transition-colors ${s.color}`} aria-label={s.label}>
-                    <s.icon className="w-4 h-4" />
-                  </a>
-                ))}
+                {socialLinks.map((s) => {
+                  const Icon = SOCIAL_ICON[s.platform];
+                  return (
+                    <a
+                      key={s.platform}
+                      href={s.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-600 flex items-center justify-center hover:text-white transition-colors ${s.hoverColor}`}
+                      aria-label={s.label}
+                      data-testid={`contact-social-${s.platform}`}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

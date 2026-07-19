@@ -16,6 +16,13 @@ export const contactInfo = {
   whatsapp: "https://chat.whatsapp.com/FwmDzQF2a7KItTjA5vJWgM",
 };
 
+export const socialLinks = [
+  { platform: "facebook",  label: "Facebook",  href: "https://www.facebook.com/ssgipathankot/",   hoverColor: "hover:bg-blue-600" },
+  { platform: "instagram", label: "Instagram", href: "https://www.instagram.com/ssgipathankot",    hoverColor: "hover:bg-pink-600" },
+  { platform: "linkedin",  label: "LinkedIn",  href: "https://www.linkedin.com/school/srisaigroup",hoverColor: "hover:bg-blue-700" },
+  { platform: "youtube",   label: "YouTube",   href: "https://www.youtube.com/@ssgipathankot",     hoverColor: "hover:bg-red-600" },
+];
+
 export const announcements = [
   { text: "Admissions 2026 Open — Apply Now for SSGI Pathankot Campus", cta: "Apply Now", href: "#apply" },
   { text: "Register Now for Joint Campus Placement Programme", cta: "Register", href: "#placements" },
