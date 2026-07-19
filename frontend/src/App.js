@@ -11,6 +11,7 @@ import CMDDesk from "@/pages/CMDDesk";
 import VicePresident from "@/pages/VicePresident";
 import DirectorPrincipal from "@/pages/DirectorPrincipal";
 import VisionMission from "@/pages/VisionMission";
+import Apply from "@/pages/Apply";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/about/vice-president" element={<VicePresident />} />
           <Route path="/about/director-principal" element={<DirectorPrincipal />} />
           <Route path="/about/vision-mission" element={<VisionMission />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/apply-now" element={<Apply />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

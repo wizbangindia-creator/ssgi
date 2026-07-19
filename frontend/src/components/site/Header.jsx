@@ -123,12 +123,14 @@ const Header = ({ onEnquire }) => {
                 </div>
               );
             })}
-            <Button
-              onClick={onEnquire}
-              className="ml-2 bg-red-700 hover:bg-red-800 text-white font-bold uppercase text-xs tracking-wider"
-            >
-              Apply Now
-            </Button>
+            <Link to="/apply">
+              <Button
+                className="ml-2 bg-red-700 hover:bg-red-800 text-white font-bold uppercase text-xs tracking-wider"
+                data-testid="header-apply-now-btn"
+              >
+                Apply Now
+              </Button>
+            </Link>
           </nav>
         </div>
       </div>
@@ -176,9 +178,11 @@ const Header = ({ onEnquire }) => {
                 )}
               </div>
             ))}
-            <Button onClick={onEnquire} className="w-full mt-3 bg-red-700 hover:bg-red-800 text-white font-bold uppercase text-sm">
-              Apply Now
-            </Button>
+            <Link to="/apply" onClick={() => setMobileOpen(false)}>
+              <Button className="w-full mt-3 bg-red-700 hover:bg-red-800 text-white font-bold uppercase text-sm" data-testid="mobile-apply-now-btn">
+                Apply Now
+              </Button>
+            </Link>
           </nav>
         </div>
       )}
