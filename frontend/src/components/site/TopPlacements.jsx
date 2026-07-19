@@ -72,14 +72,22 @@ const TopPlacements = ({ onEnquire }) => (
           <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
           <div className="flex gap-3 md:gap-4 animate-[marquee_45s_linear_infinite] hover:[animation-play-state:paused]">
-            {[...recruiters, ...recruiters].map((_src, i) => (
+            {[...recruiters, ...recruiters].map((r, i) => (
               <div
                 key={i}
-                className="shrink-0 h-16 md:h-20 w-32 md:w-44 flex items-center justify-center gap-2 rounded-lg bg-slate-50 border border-slate-200 shadow-sm px-3 md:px-5"
+                className="shrink-0 h-16 md:h-20 w-40 md:w-52 flex items-center justify-center gap-3 rounded-lg bg-white border border-slate-200 shadow-sm px-4 md:px-5 hover:shadow-md hover:border-red-200 transition-all"
+                title={r.name}
               >
-                <Building2 className="w-4 h-4 md:w-5 md:h-5 text-slate-400 shrink-0" strokeWidth={1.5} />
-                <span className="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-slate-500">
-                  Recruiter #{(i % recruiters.length) + 1}
+                <img
+                  src={r.logo}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain shrink-0"
+                  loading="lazy"
+                  onError={(e) => { e.currentTarget.style.display = "none"; }}
+                />
+                <span className="text-sm md:text-base font-black text-slate-800 uppercase tracking-wide leading-tight truncate">
+                  {r.name}
                 </span>
               </div>
             ))}

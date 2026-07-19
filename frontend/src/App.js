@@ -22,6 +22,7 @@ import CampusLifeDetail from "@/pages/CampusLifeDetail";
 import Sports from "@/pages/campus/Sports";
 import Cafeteria from "@/pages/campus/Cafeteria";
 import Contact from "@/pages/Contact";
+import Careers from "@/pages/Careers";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
           <Route path="/campus-life/:slug" element={<CampusLifeDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/career" element={<Careers />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

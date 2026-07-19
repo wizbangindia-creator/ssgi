@@ -107,7 +107,7 @@ const Header = ({ onEnquire }) => {
           {/* Utility nav */}
           <nav className="hidden lg:flex items-center gap-5 text-[12px] font-semibold uppercase tracking-wider text-slate-700">
             {primaryNav.map((label) => {
-              const routeMap = { "Contact Us": "/contact" };
+              const routeMap = { "Contact Us": "/contact", "Career": "/careers" };
               const to = routeMap[label];
               return to ? (
                 <Link key={label} to={to} className="hover:text-red-700 transition-colors" data-testid={`utility-nav-${label.toLowerCase().replace(/\s+/g, "-")}`}>
