@@ -12,15 +12,16 @@ const VicePresident = () => (
       breadcrumb={[{ label: "About", to: "/about" }, { label: "Vice President" }]}
     />
     <LeaderMessage
-      name="Dr. Neeraj Sharma"
+      name="Mrs. Riya Trehan"
       designation="Vice President — Sri Sai Group of Institutes"
       eyebrow="VP's Address"
       headline="A great campus is not built by buildings, but by the quality of relationships within it."
+      photo="https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/ky5rs190_riya-punj.webp"
       quickFacts={[
         "Leads academic governance, faculty development and student affairs",
         "Focus on outcome-based learning and curriculum quality",
         "Champion of student mentorship and pastoral care",
-        "25+ years in higher education and administration",
+        "Committed to a caring, structured and ambitious campus experience",
       ]}
       paragraphs={[
         "A university campus is one of the most powerful spaces a young person will ever walk into. It is where lifelong friendships are formed, where identities take shape, and where dreams for the next fifty years quietly begin. At Sri Sai Group of Institutes, we treat this responsibility with deep seriousness.",

@@ -21,6 +21,7 @@ const leaders = [
   { name: "Managing Director", to: "/about/managing-director", role: "MD's Address" },
   { name: "CMD Desk", to: "/about/cmd-desk", role: "Chief Managing Director" },
   { name: "Vice President", to: "/about/vice-president", role: "VP's Message" },
+  { name: "Director-Principal", to: "/about/director-principal", role: "Sri Sai College of Engg. & Tech." },
   { name: "Vision & Mission", to: "/about/vision-mission", role: "Purpose & Values" },
 ];
 

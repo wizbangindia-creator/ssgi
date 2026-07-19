@@ -12,10 +12,11 @@ const ChairmansDesk = () => (
       breadcrumb={[{ label: "About", to: "/about" }, { label: "Chairman's Desk" }]}
     />
     <LeaderMessage
-      name="Sh. Ashok Punj"
+      name="Er. S. K. Punj"
       designation="Chairman — Sri Sai Group of Institutes"
       eyebrow="Chairman's Message"
       headline="Great institutions are built brick by brick — with vision, values and unwavering commitment."
+      photo="https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/5wdeh392_sk-punj.webp"
       quickFacts={[
         "Leads long-term strategy and governance at SSGI",
         "Champion of industry-integrated curriculum design",

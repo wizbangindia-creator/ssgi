@@ -7,28 +7,26 @@ const FoundersMessage = () => (
   <PageLayout>
     <PageHero
       eyebrow="Leadership"
-      title="Founder's Message"
+      title="About the Founder & Message"
       subtitle="Reflections on the ideals that gave birth to Sri Sai Group of Institutes."
       breadcrumb={[{ label: "About", to: "/about" }, { label: "Founder's Message" }]}
     />
     <LeaderMessage
-      name="Late Sh. Chaman Lal Punj Ji"
+      name="Babu Ram Iqbal Bhardwaj Ji"
       designation="Founder — Sri Sai Group of Institutes"
-      eyebrow="From the Founder"
-      headline="Education is the noblest of all missions, and every student is a promise of tomorrow."
+      eyebrow="About the Founder"
+      headline="A revolutionary in Punjab's technical education — guiding SSGI like a Pole-Star."
       quickFacts={[
-        "Established SSGI at Pathankot in 1996",
-        "Believed in accessible, quality technical education for all",
-        "Pioneered the 3D philosophy — Determination, Dedication, Devotion",
-        "Legacy of shaping 40,000+ students and counting",
+        "53 years of rich, fruitful experience in the field of education",
+        "Originator & pioneer of technical education in Punjab (early 1990s)",
+        "Established Sri Sai Group of Institutes at Pathankot in 1996",
+        "Guiding force behind SSGI's philosophy and educational vision",
       ]}
       paragraphs={[
-        "When we laid the foundation stone of Sri Sai Group of Institutes in 1996, we were not merely opening a college — we were opening a door of opportunity for thousands of young dreamers of this region. Our belief was simple: geography or family income should never decide the future of a talented, hard-working student.",
-        "For decades, meritorious students of Punjab, Himachal Pradesh, Jammu & Kashmir and beyond had to travel far to pursue technical and professional education. We wanted to bring that education home — with the same rigour, the same discipline and the same respect for excellence that any leading institution of the country would offer.",
-        "From day one, we chose the harder path. We invested in qualified teachers, industry-grade laboratories, sports and cultural facilities and hostels that felt like home. We chose to teach values along with textbooks. We chose to build character along with careers.",
-        "Today, when I see SSGI alumni excelling in leading MNCs, government services, defence, medicine, teaching, entrepreneurship and public life across India and abroad — the seed we sowed feels like a forest. Each achievement of every student is our real reward.",
-        "To every student joining SSGI: this campus is not just where you study for a few years. It is where you discover who you truly are. Give it your best, and it will give you far more in return than a degree — it will give you a life you are proud of.",
-        "With warm wishes and blessings,",
+        "With a rich and fruitful experience of 53 years in the field of education, Sh. Ram Iqbal Bhardwaj Ji, the founder, has been guiding the society like a Pole-Star. He can rightly be called a 'Revolutionary' in the field of Technical Education, because he is the originator and pioneer to open flood gates of technical education in the state of Punjab in early years of nineties.",
+        "Founder's Message —",
+        "Educational Institutes are the real temples and monuments of the modern India. These are called upon to serve as economic engines of local and global economies and must provide highly trained and globally competitive work force for the future. All institutions under the fold of Sri Sai Group of Institutes provide wonderful environment of learning in the class rooms.",
+        "Here is an opportunity to be part of the leading Sri Sai Group as a student and allow you to grow for a very bright career.",
       ]}
       signOff="With warm regards,"
     />

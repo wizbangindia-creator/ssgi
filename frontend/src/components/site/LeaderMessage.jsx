@@ -11,20 +11,30 @@ const LeaderMessage = ({
   paragraphs = [],
   signOff = "",
   quickFacts = [],
+  photo = null,
 }) => (
   <section className="py-14 md:py-20 bg-white">
     <div className="max-w-[1400px] mx-auto px-4">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        {/* Left: portrait placeholder + info card */}
+        {/* Left: portrait + info card */}
         <aside className="lg:col-span-4 lg:sticky lg:top-32">
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
-            <Placeholder
-              icon={User}
-              label={name}
-              className="w-full aspect-[4/5]"
-              rounded="rounded-none"
-              variant="light"
-            />
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white" data-testid="leader-card">
+            {photo ? (
+              <img
+                src={photo}
+                alt={name}
+                className="w-full aspect-[4/5] object-cover object-top bg-slate-100"
+                data-testid="leader-photo"
+              />
+            ) : (
+              <Placeholder
+                icon={User}
+                label={name}
+                className="w-full aspect-[4/5]"
+                rounded="rounded-none"
+                variant="light"
+              />
+            )}
             <div className="p-5 md:p-6 bg-gradient-to-br from-slate-50 to-white">
               <div className="text-[10px] uppercase tracking-widest text-red-700 font-bold">SSGI Leadership</div>
               <div className="text-xl md:text-2xl font-extrabold text-slate-900 mt-1">{name}</div>

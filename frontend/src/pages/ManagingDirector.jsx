@@ -12,10 +12,11 @@ const ManagingDirector = () => (
       breadcrumb={[{ label: "About", to: "/about" }, { label: "Managing Director" }]}
     />
     <LeaderMessage
-      name="Sh. Sanjeev Punj"
+      name="Smt. Tripta Punj"
       designation="Managing Director — Sri Sai Group of Institutes"
       eyebrow="MD's Address"
       headline="The best learning happens when institutions and industry walk hand in hand."
+      photo="https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/9sispxrh_tripta-punj.webp"
       quickFacts={[
         "Oversees day-to-day operations and academic execution",
         "Drives industry partnerships and placement outcomes",

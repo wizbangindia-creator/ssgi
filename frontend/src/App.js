@@ -9,6 +9,7 @@ import ChairmansDesk from "@/pages/ChairmansDesk";
 import ManagingDirector from "@/pages/ManagingDirector";
 import CMDDesk from "@/pages/CMDDesk";
 import VicePresident from "@/pages/VicePresident";
+import DirectorPrincipal from "@/pages/DirectorPrincipal";
 import VisionMission from "@/pages/VisionMission";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about/managing-director" element={<ManagingDirector />} />
           <Route path="/about/cmd-desk" element={<CMDDesk />} />
           <Route path="/about/vice-president" element={<VicePresident />} />
+          <Route path="/about/director-principal" element={<DirectorPrincipal />} />
           <Route path="/about/vision-mission" element={<VisionMission />} />
         </Routes>
       </BrowserRouter>
