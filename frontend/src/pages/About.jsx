@@ -41,6 +41,31 @@ const About = () => (
       breadcrumb={[{ label: "About" }]}
     />
 
+    {/* Campus banner */}
+    <section className="bg-white" data-testid="about-campus-banner">
+      <div className="max-w-[1400px] mx-auto px-4 pt-8 md:pt-12">
+        <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group">
+          <img
+            src="https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/sucxmlx2_ssgi.jpeg"
+            alt="Sri Sai College of Engineering & Technology, Pathankot"
+            className="w-full h-[260px] sm:h-[340px] md:h-[460px] object-cover object-center transition-transform duration-[1400ms] group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">
+            <div className="max-w-[1200px]">
+              <div className="text-[11px] uppercase tracking-widest text-red-300 font-bold mb-2">Our Campus</div>
+              <h3 className="text-white font-extrabold text-2xl md:text-4xl leading-tight tracking-tight">
+                Sri Sai College of Engineering &amp; Technology
+              </h3>
+              <p className="text-slate-200 text-sm md:text-base mt-1 md:mt-2 max-w-2xl">
+                A sprawling, green and vibrant campus at Pathankot — the flagship home of SSGI's academic legacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* Overview */}
     <section className="py-14 md:py-20 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
