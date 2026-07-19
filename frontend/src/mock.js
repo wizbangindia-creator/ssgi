@@ -55,8 +55,6 @@ export const megaNav = [
           { label: "Vice President", to: "/about/vice-president" },
           { label: "Director-Principal", to: "/about/director-principal" },
           { label: "Vision & Mission", to: "/about/vision-mission" },
-          "Legacy",
-          "Silver Jubilee Year",
         ],
       },
       {

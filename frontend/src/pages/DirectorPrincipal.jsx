@@ -16,6 +16,7 @@ const DirectorPrincipal = () => (
       designation="Director-Principal — Sri Sai College of Engineering and Technology"
       eyebrow="Director-Principal's Message"
       headline="An engineering campus must teach students to think, build and lead — not just to pass exams."
+      photo="https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/hxz6q8t4_dr%20vipin%20kumar%20gupta.jpeg"
       quickFacts={[
         "Heads academic administration at Sri Sai College of Engineering & Technology",
         "Focus on outcome-based education and NBA/NAAC compliance",

@@ -4,13 +4,20 @@ import { Menu, X, Phone, Search, ChevronDown } from "lucide-react";
 import { primaryNav, megaNav, contactInfo, brand } from "@/mock";
 import { Button } from "@/components/ui/button";
 
-const MegaDropdown = ({ item }) => (
-  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-    <div
-      className={`bg-white rounded-b-lg shadow-2xl border border-slate-200 p-6 grid gap-6 ${
-        item.columns.length > 2 ? "grid-cols-2 md:grid-cols-4 w-[900px]" : "grid-cols-2 w-[560px]"
-      }`}
-    >
+const MegaDropdown = ({ item, align = "center" }) => {
+  const alignClass =
+    align === "left"
+      ? "left-0"
+      : align === "right"
+      ? "right-0"
+      : "left-1/2 -translate-x-1/2";
+  return (
+    <div className={`absolute ${alignClass} top-full pt-3 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200`}>
+      <div
+        className={`bg-white rounded-b-lg shadow-2xl border border-slate-200 p-6 grid gap-6 ${
+          item.columns.length > 2 ? "grid-cols-2 md:grid-cols-4 w-[900px]" : "grid-cols-2 w-[560px]"
+        }`}
+      >
       {item.columns.map((col, idx) => (
         <div key={idx}>
           <h4 className="text-[11px] font-bold uppercase tracking-widest text-red-700 border-b border-red-100 pb-2 mb-3">
@@ -39,7 +46,8 @@ const MegaDropdown = ({ item }) => (
       ))}
     </div>
   </div>
-);
+  );
+};
 
 const Header = ({ onEnquire }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -103,14 +111,18 @@ const Header = ({ onEnquire }) => {
       <div className="hidden lg:block border-t border-slate-100 bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
           <nav className="flex items-center justify-between gap-2 h-12">
-            {megaNav.map((m) => (
-              <div key={m.label} className="group relative h-full flex items-center">
-                <button className="flex items-center gap-1 text-[13px] font-bold uppercase tracking-wider text-slate-800 hover:text-red-700 transition-colors px-2">
-                  {m.label} <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <MegaDropdown item={m} />
-              </div>
-            ))}
+            {megaNav.map((m, mi) => {
+              const align =
+                mi <= 1 ? "left" : mi >= megaNav.length - 2 ? "right" : "center";
+              return (
+                <div key={m.label} className="group relative h-full flex items-center">
+                  <button className="flex items-center gap-1 text-[13px] font-bold uppercase tracking-wider text-slate-800 hover:text-red-700 transition-colors px-2">
+                    {m.label} <ChevronDown className="w-3.5 h-3.5" />
+                  </button>
+                  <MegaDropdown item={m} align={align} />
+                </div>
+              );
+            })}
             <Button
               onClick={onEnquire}
               className="ml-2 bg-red-700 hover:bg-red-800 text-white font-bold uppercase text-xs tracking-wider"
