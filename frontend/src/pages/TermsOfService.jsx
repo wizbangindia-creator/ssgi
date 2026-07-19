@@ -17,7 +17,7 @@ const TermsOfService = () => (
           <>
             <p>
               These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the website{" "}
-              <span className="font-semibold text-slate-900">srisaigroup.edu.in</span>, its sub-domains and any
+              <span className="font-semibold text-slate-900">srisaigroup.in</span>, its sub-domains and any
               associated mobile applications, together with all content, features and functionalities offered
               through them (collectively, the &ldquo;Services&rdquo;) by Sri Sai Group of Institutes
               (&ldquo;SSGI&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;).
@@ -210,8 +210,8 @@ const TermsOfService = () => (
           Write to the Registrar&rsquo;s Office, Sri Sai Group of Institutes, Badhani, Pathankot, Punjab &mdash; 145001.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
-          <a href="mailto:legal@srisaigroup.edu.in" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
-            <Mail className="w-4 h-4" /> legal@srisaigroup.edu.in
+          <a href="mailto:legal@srisaigroup.in" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
+            <Mail className="w-4 h-4" /> legal@srisaigroup.in
           </a>
         </div>
       </>

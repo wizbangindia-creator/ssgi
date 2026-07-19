@@ -153,7 +153,7 @@ const AntiRagging = () => (
               </a>
 
               <a
-                href="tel:9418001818"
+                href="tel:8427184271"
                 className="flex items-start gap-3 rounded-xl border border-red-200 bg-white p-5 hover:shadow-md transition-shadow"
                 data-testid="antirag-ssgi-cell"
               >
@@ -162,13 +162,13 @@ const AntiRagging = () => (
                 </div>
                 <div>
                   <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">SSGI Anti-Ragging Cell</div>
-                  <div className="font-extrabold text-slate-900 text-lg">+91 94180 01818</div>
+                  <div className="font-extrabold text-slate-900 text-lg">84271-84271</div>
                   <div className="text-xs text-slate-600">Available 24&times;7 during academic session</div>
                 </div>
               </a>
 
               <a
-                href="mailto:antiragging@srisaigroup.edu.in"
+                href="mailto:antiragging@srisaigroup.in"
                 className="flex items-start gap-3 rounded-xl border border-red-200 bg-white p-5 hover:shadow-md transition-shadow"
                 data-testid="antirag-ssgi-email"
               >
@@ -177,7 +177,7 @@ const AntiRagging = () => (
                 </div>
                 <div>
                   <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">SSGI Grievance Email</div>
-                  <div className="font-extrabold text-slate-900 text-lg break-all">antiragging@srisaigroup.edu.in</div>
+                  <div className="font-extrabold text-slate-900 text-lg break-all">antiragging@srisaigroup.in</div>
                   <div className="text-xs text-slate-600">Reviewed by Director-Principal</div>
                 </div>
               </a>
@@ -243,10 +243,10 @@ const AntiRagging = () => (
           criminal offence &mdash; we are here to protect you.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
-          <a href="tel:9418001818" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
+          <a href="tel:8427184271" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
             <Phone className="w-4 h-4" /> Call SSGI Anti-Ragging Cell
           </a>
-          <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
+          <a href="https://wa.me/918427184271" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
             <MessageCircle className="w-4 h-4" /> WhatsApp
           </a>
           <a href="tel:18001805522" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-full text-sm font-semibold">

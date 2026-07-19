@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Search, ChevronDown, ArrowRight } from "lucide-react";
 import { primaryNav, megaNav, contactInfo, brand } from "@/mock";
 import { Button } from "@/components/ui/button";
 
@@ -14,38 +14,75 @@ const MegaDropdown = ({ item, align = "center" }) => {
   return (
     <div className={`absolute ${alignClass} top-full pt-3 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200`}>
       <div
-        className={`bg-white rounded-b-lg shadow-2xl border border-slate-200 p-6 grid gap-6 ${
-          item.columns.length > 2 ? "grid-cols-2 md:grid-cols-4 w-[900px]" : "grid-cols-2 w-[560px]"
+        className={`bg-white rounded-b-lg shadow-2xl border border-slate-200 overflow-hidden ${
+          item.columns.length > 2 ? "w-[1080px]" : "w-[820px]"
         }`}
       >
-      {item.columns.map((col, idx) => (
-        <div key={idx}>
-          <h4 className="text-[11px] font-bold uppercase tracking-widest text-red-700 border-b border-red-100 pb-2 mb-3">
-            {col.title}
-          </h4>
-          <ul className="space-y-1.5">
-            {col.items.map((it, ii) => {
-              const label = typeof it === "string" ? it : it.label;
-              const to = typeof it === "object" ? it.to : null;
-              return (
-                <li key={ii}>
-                  {to ? (
-                    <Link to={to} className="text-[13px] text-slate-700 hover:text-red-700 transition-colors block">
-                      {label}
-                    </Link>
-                  ) : (
-                    <a href="#" className="text-[13px] text-slate-700 hover:text-red-700 transition-colors block">
-                      {label}
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+        <div className="grid" style={{ gridTemplateColumns: item.feature ? (item.columns.length > 2 ? "1fr 1fr 1fr 1fr 300px" : "1fr 1fr 300px") : undefined }}>
+          {/* Link columns */}
+          <div className={`p-6 grid gap-6 ${item.columns.length > 2 ? "grid-cols-4 col-span-4" : "grid-cols-2 col-span-2"}`}>
+            {item.columns.map((col, idx) => (
+              <div key={idx}>
+                <h4 className="text-[11px] font-bold uppercase tracking-widest text-red-700 border-b border-red-100 pb-2 mb-3">
+                  {col.title}
+                </h4>
+                <ul className="space-y-1.5">
+                  {col.items.map((it, ii) => {
+                    const label = typeof it === "string" ? it : it.label;
+                    const to = typeof it === "object" ? it.to : null;
+                    return (
+                      <li key={ii}>
+                        {to ? (
+                          <Link to={to} className="text-[13px] text-slate-700 hover:text-red-700 transition-colors block leading-snug">
+                            {label}
+                          </Link>
+                        ) : (
+                          <a href="#" className="text-[13px] text-slate-700 hover:text-red-700 transition-colors block leading-snug">
+                            {label}
+                          </a>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Feature card */}
+          {item.feature && (
+            <Link
+              to={item.feature.cta?.to || "#"}
+              className="group/feat relative overflow-hidden bg-slate-950 text-white flex flex-col justify-end min-h-[300px]"
+              data-testid={`mega-feature-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
+            >
+              <img
+                src={item.feature.image}
+                alt={item.feature.title}
+                className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover/feat:opacity-90 group-hover/feat:scale-105 transition-all duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/10" />
+              <div className="relative p-5">
+                <div className="inline-block text-[10px] uppercase tracking-widest font-bold bg-red-600 text-white px-2 py-1 rounded-full mb-2">
+                  {item.feature.eyebrow}
+                </div>
+                <div className="font-extrabold text-white text-base leading-tight">
+                  {item.feature.title}
+                </div>
+                <p className="mt-2 text-xs text-slate-300 leading-relaxed">
+                  {item.feature.copy}
+                </p>
+                <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-red-300 group-hover/feat:text-red-200 transition-colors">
+                  {item.feature.cta?.label || "Learn more"}
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
+              </div>
+            </Link>
+          )}
         </div>
-      ))}
+      </div>
     </div>
-  </div>
   );
 };
 
@@ -87,7 +124,7 @@ const Header = ({ onEnquire }) => {
           {/* Helpline + search + mobile */}
           <div className="flex items-center gap-2">
             <a
-              href={`tel:${contactInfo.helpline.replace(/\s/g, "")}`}
+              href={`tel:${contactInfo.helpline.replace(/[\s-]/g, "")}`}
               className="hidden md:flex items-center gap-2.5 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md shadow-sm transition-colors"
             >
               <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center">

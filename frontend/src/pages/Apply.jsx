@@ -215,10 +215,10 @@ const Apply = () => {
 
             {/* quick contact strip */}
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="tel:18001218427" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/15 text-white px-4 py-2.5 rounded-full text-sm font-semibold transition-colors" data-testid="apply-call-btn">
-                <Phone className="w-4 h-4" /> 1800 121 84271
+              <a href="tel:8427184271" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/15 text-white px-4 py-2.5 rounded-full text-sm font-semibold transition-colors" data-testid="apply-call-btn">
+                <Phone className="w-4 h-4" /> 84271-84271
               </a>
-              <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-full text-sm font-semibold transition-colors" data-testid="apply-whatsapp-btn">
+              <a href="https://wa.me/918427184271" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-full text-sm font-semibold transition-colors" data-testid="apply-whatsapp-btn">
                 <MessageCircle className="w-4 h-4" /> WhatsApp Us
               </a>
             </div>
@@ -573,9 +573,9 @@ const Apply = () => {
                 Apply Now <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </a>
-            <a href="tel:18001218427">
+            <a href="tel:8427184271">
               <Button variant="outline" className="h-12 px-8 bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white font-bold uppercase tracking-wider">
-                <Phone className="w-4 h-4 mr-2" /> Call 1800 121 84271
+                <Phone className="w-4 h-4 mr-2" /> Call 84271-84271
               </Button>
             </a>
           </div>

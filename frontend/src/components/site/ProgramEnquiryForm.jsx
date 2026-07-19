@@ -217,10 +217,10 @@ const ProgramEnquiryForm = ({ program, variant = "compact" }) => {
         </Button>
 
         <div className="grid grid-cols-2 gap-2 pt-1">
-          <a href="tel:18001218427" className="text-center rounded-lg border border-slate-200 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors">
+          <a href="tel:8427184271" className="text-center rounded-lg border border-slate-200 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors">
             <Phone className="w-3.5 h-3.5 inline mr-1" /> Call
           </a>
-          <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer" className="text-center rounded-lg border border-emerald-200 bg-emerald-50 py-2.5 text-xs font-bold text-emerald-700 hover:bg-emerald-100 transition-colors">
+          <a href="https://wa.me/918427184271" target="_blank" rel="noreferrer" className="text-center rounded-lg border border-emerald-200 bg-emerald-50 py-2.5 text-xs font-bold text-emerald-700 hover:bg-emerald-100 transition-colors">
             <MessageCircle className="w-3.5 h-3.5 inline mr-1" /> WhatsApp
           </a>
         </div>

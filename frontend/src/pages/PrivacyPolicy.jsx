@@ -19,7 +19,7 @@ const PrivacyPolicy = () => (
               Sri Sai Group of Institutes (&ldquo;SSGI&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;)
               is committed to protecting the privacy of every visitor, prospective applicant, student, parent,
               employee and partner who interacts with us through our website{" "}
-              <span className="font-semibold text-slate-900">srisaigroup.edu.in</span>, our sub-domains, mobile
+              <span className="font-semibold text-slate-900">srisaigroup.in</span>, our sub-domains, mobile
               applications and offline channels (collectively, the &ldquo;Services&rdquo;).
             </p>
             <p>
@@ -205,11 +205,11 @@ const PrivacyPolicy = () => (
           Grievance / Privacy Officer, Sri Sai Group of Institutes, Badhani, Pathankot, Punjab &mdash; 145001, India.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
-          <a href="mailto:privacy@srisaigroup.edu.in" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
-            <Mail className="w-4 h-4" /> privacy@srisaigroup.edu.in
+          <a href="mailto:privacy@srisaigroup.in" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
+            <Mail className="w-4 h-4" /> privacy@srisaigroup.in
           </a>
-          <a href="tel:18001218427" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
-            <Phone className="w-4 h-4" /> 1800 121 84271
+          <a href="tel:8427184271" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-full text-sm font-semibold">
+            <Phone className="w-4 h-4" /> 84271-84271
           </a>
         </div>
       </>

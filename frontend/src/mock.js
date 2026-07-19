@@ -10,7 +10,7 @@ export const brand = {
 export const contactInfo = {
   phone: "+91-8427184271",
   phoneShort: "84271-84271",
-  helpline: "1800 121 84271",
+  helpline: "84271-84271",
   email: "Info@srisaigroup.in",
   address: "Dalhousie Road, Badhani, Pathankot (145001), Punjab",
   whatsapp: "https://chat.whatsapp.com/FwmDzQF2a7KItTjA5vJWgM",
@@ -43,6 +43,13 @@ export const primaryNav = [
 export const megaNav = [
   {
     label: "About",
+    feature: {
+      image: "https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/sucxmlx2_ssgi.jpeg",
+      eyebrow: "Since 1996",
+      title: "A legacy of excellence in North India",
+      copy: "Meet the leadership, vision and values that built Sri Sai Group of Institutes over 25+ years.",
+      cta: { label: "About SSGI", to: "/about" },
+    },
     columns: [
       {
         title: "About SSGI",
@@ -65,6 +72,13 @@ export const megaNav = [
   },
   {
     label: "Programs",
+    feature: {
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=60",
+      eyebrow: "50+ Programmes",
+      title: "Find your calling. Build your future.",
+      copy: "From B.Tech and MBA to Pharmacy, Education, Agriculture and Polytechnic — the full SSGI catalogue.",
+      cta: { label: "Explore All Programs", to: "/programs" },
+    },
     columns: [
       { title: "Engineering", items: [
         { label: "B.Tech CSE", to: "/programs/btech-cse" },
@@ -102,6 +116,13 @@ export const megaNav = [
   },
   {
     label: "Academics",
+    feature: {
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=700&q=60",
+      eyebrow: "Learn & Grow",
+      title: "Outcome-based, industry-aligned academics",
+      copy: "IBM CoE, Pearson VUE, NPTEL, Virtual Labs — everything you need to master your discipline.",
+      cta: { label: "See Academic Support", to: "/programs" },
+    },
     columns: [
       { title: "Departments", items: ["Sri Sai College of Engg & Tech", "Sri Sai Iqbal College", "Sri Sai College of Pharmacy", "Sri Sai Polytechnic", "Sri Sai College of Education", "Sri Sai Degree College"] },
       { title: "Academic Support", items: ["E-Content", "NPTEL", "Spoken Tutorial", "Virtual Labs", "Pearson VUE", "Career Udaan"] },
@@ -109,6 +130,13 @@ export const megaNav = [
   },
   {
     label: "Admissions",
+    feature: {
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=60",
+      eyebrow: "Admissions 2026 Open",
+      title: "Apply in under 60 seconds",
+      copy: "Unlock scholarships up to 100%, flexible EMI fees and placement assurance from Year 1.",
+      cta: { label: "Apply Now", to: "/apply" },
+    },
     columns: [
       { title: "Apply", items: ["Admission 2026", "Eligibility Criteria", "Fee Structure", "SSGI Scholarship", "Migration Rules", "Pay Fees"] },
       { title: "Support", items: ["Education Loan", "Hostel Facilities", "Transportation", "Prospectus Download"] },
@@ -116,6 +144,13 @@ export const megaNav = [
   },
   {
     label: "Campus Life",
+    feature: {
+      image: "https://customer-assets-agu9un31.emergentagent.net/job_deploy-test-85/artifacts/sucxmlx2_ssgi.jpeg",
+      eyebrow: "8,000+ students",
+      title: "A community you'll always call home",
+      copy: "Hostels, sports, clubs, cultural fests and student support — every corner of campus life at SSGI.",
+      cta: { label: "Explore Campus Life", to: "/campus-life" },
+    },
     columns: [
       { title: "Facilities", items: [
         { label: "Residential", to: "/campus-life/residential" },
@@ -137,6 +172,13 @@ export const megaNav = [
   },
   {
     label: "Placements",
+    feature: {
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=700&q=60",
+      eyebrow: "Career Udaan · PAP",
+      title: "From classroom to top MNCs",
+      copy: "200+ recruiters, ₹24.5 LPA highest, 92%+ placement rate — Career Udaan runs from Year 1.",
+      cta: { label: "Placement Stats", to: "/programs" },
+    },
     columns: [
       { title: "Placement Cell", items: ["Placement Statistics", "Placement News", "Success Stories", "Placement Drives", "Industry Visits", "Career Udaan (PAP)"] },
       { title: "Recruiters", items: ["Our Recruiters", "MOU with Pearson VUE", "Corporate Tie-ups", "Apply for Drives"] },
@@ -144,6 +186,13 @@ export const megaNav = [
   },
   {
     label: "Research",
+    feature: {
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=60",
+      eyebrow: "Innovate at SSGI",
+      title: "Patents, publications & partnerships",
+      copy: "An active R&D cell driving industry-relevant research and student-led innovation.",
+      cta: { label: "Explore Research", to: "/programs" },
+    },
     columns: [
       { title: "Research @ SSGI", items: ["Patents", "Publications", "Research Centres", "R&D Cell", "Industry Collaborations"] },
     ],

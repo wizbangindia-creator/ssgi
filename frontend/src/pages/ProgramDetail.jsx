@@ -151,12 +151,12 @@ const ProgramDetail = () => {
                     Apply Now <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
-                <a href="tel:18001218427">
+                <a href="tel:8427184271">
                   <Button variant="outline" className="h-11 px-5 bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white font-bold uppercase tracking-wider">
-                    <Phone className="w-4 h-4 mr-2" /> 1800 121 84271
+                    <Phone className="w-4 h-4 mr-2" /> 84271-84271
                   </Button>
                 </a>
-                <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/918427184271" target="_blank" rel="noreferrer">
                   <Button className="h-11 px-5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold uppercase tracking-wider">
                     <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp
                   </Button>

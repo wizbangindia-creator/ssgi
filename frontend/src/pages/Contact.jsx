@@ -30,12 +30,12 @@ import {
 } from "lucide-react";
 
 const departments = [
-  { icon: GraduationCap, name: "Admissions Cell",       phone: contactInfo.helpline, email: "admissions@srisaigroup.edu.in", hours: "9 am – 6 pm, Mon–Sat" },
-  { icon: Briefcase,     name: "Placement Cell",        phone: "+91 94180 01919",     email: "placements@srisaigroup.edu.in", hours: "10 am – 5 pm, Mon–Fri" },
-  { icon: Home,          name: "Hostel Office",         phone: "+91 94180 01717",     email: "hostel@srisaigroup.edu.in",     hours: "8 am – 8 pm, All days" },
-  { icon: Bus,           name: "Transport Office",      phone: "+91 94180 01616",     email: "transport@srisaigroup.edu.in",  hours: "7 am – 6 pm, Mon–Sat" },
-  { icon: Users,         name: "Accounts / Finance",    phone: "+91 94180 01515",     email: "accounts@srisaigroup.edu.in",   hours: "10 am – 5 pm, Mon–Fri" },
-  { icon: ShieldAlert,   name: "Anti-Ragging Cell",     phone: "+91 94180 01818",     email: "antiragging@srisaigroup.edu.in",hours: "24×7 during session" },
+  { icon: GraduationCap, name: "Admissions Cell",       phone: contactInfo.helpline, email: "admissions@srisaigroup.in", hours: "9 am – 6 pm, Mon–Sat" },
+  { icon: Briefcase,     name: "Placement Cell",        phone: "84271-84271",     email: "placements@srisaigroup.in", hours: "10 am – 5 pm, Mon–Fri" },
+  { icon: Home,          name: "Hostel Office",         phone: "84271-84271",     email: "hostel@srisaigroup.in",     hours: "8 am – 8 pm, All days" },
+  { icon: Bus,           name: "Transport Office",      phone: "84271-84271",     email: "transport@srisaigroup.in",  hours: "7 am – 6 pm, Mon–Sat" },
+  { icon: Users,         name: "Accounts / Finance",    phone: "84271-84271",     email: "accounts@srisaigroup.in",   hours: "10 am – 5 pm, Mon–Fri" },
+  { icon: ShieldAlert,   name: "Anti-Ragging Cell",     phone: "84271-84271",     email: "antiragging@srisaigroup.in",hours: "24×7 during session" },
 ];
 
 const Contact = () => {
@@ -91,7 +91,7 @@ const Contact = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {[
               { icon: Phone,    accent: "from-red-600 to-rose-600",     title: "Call Admissions", value: contactInfo.helpline, sub: "Toll-Free · Mon–Sat 9 am–6 pm", href: `tel:${contactInfo.helpline.replace(/\s/g, "")}` },
-              { icon: MessageCircle, accent: "from-emerald-500 to-teal-600", title: "WhatsApp", value: "+91 94180 01818", sub: "Fastest response — chat instantly", href: "https://wa.me/919418001818" },
+              { icon: MessageCircle, accent: "from-emerald-500 to-teal-600", title: "WhatsApp", value: "84271-84271", sub: "Fastest response — chat instantly", href: "https://wa.me/918427184271" },
               { icon: Mail,     accent: "from-sky-500 to-indigo-600",   title: "Email Us",       value: contactInfo.email, sub: "We reply within 24 hours", href: `mailto:${contactInfo.email}` },
               { icon: MapPin,   accent: "from-amber-500 to-orange-600", title: "Visit Campus",   value: "Badhani, Pathankot", sub: contactInfo.address, href: "https://www.google.com/maps?q=Sri+Sai+Group+of+Institutes+Pathankot" },
             ].map((c) => (
@@ -302,7 +302,7 @@ const Contact = () => {
                 Apply Now <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
-            <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/918427184271" target="_blank" rel="noreferrer">
               <Button className="h-12 px-8 bg-emerald-600 hover:bg-emerald-700 text-white font-bold uppercase tracking-wider">
                 <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp Us
               </Button>

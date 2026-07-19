@@ -36,7 +36,7 @@ const Footer = () => (
               <Phone className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
               <div>
                 <a href={`tel:${contactInfo.phone}`} className="block hover:text-red-300">Call: {contactInfo.phoneShort}</a>
-                <a href={`tel:${contactInfo.helpline.replace(/\s/g,'')}`} className="block hover:text-red-300">Helpline: {contactInfo.helpline}</a>
+                <a href={`tel:${contactInfo.helpline.replace(/[\s-]/g,'')}`} className="block hover:text-red-300">Helpline: {contactInfo.helpline}</a>
               </div>
             </li>
             <li className="flex items-start gap-2">
