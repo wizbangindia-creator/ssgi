@@ -12,6 +12,9 @@ import VicePresident from "@/pages/VicePresident";
 import DirectorPrincipal from "@/pages/DirectorPrincipal";
 import VisionMission from "@/pages/VisionMission";
 import Apply from "@/pages/Apply";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import AntiRagging from "@/pages/AntiRagging";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
           <Route path="/about/vision-mission" element={<VisionMission />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/apply-now" element={<Apply />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/anti-ragging" element={<AntiRagging />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

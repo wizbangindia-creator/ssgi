@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { contactInfo, megaNav, brand } from "@/mock";
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Twitter, Linkedin } from "lucide-react";
 
@@ -78,11 +79,11 @@ const Footer = () => (
 
       <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
         <div>&copy; {new Date().getFullYear()} Sri Sai Group of Institutes. All rights reserved.</div>
-        <div className="flex gap-5">
-          <a href="#" className="hover:text-red-300">Privacy Policy</a>
-          <a href="#" className="hover:text-red-300">Terms of Service</a>
+        <div className="flex flex-wrap gap-5">
+          <Link to="/privacy-policy" className="hover:text-red-300" data-testid="footer-privacy-link">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="hover:text-red-300" data-testid="footer-terms-link">Terms of Service</Link>
           <a href="#" className="hover:text-red-300">Sitemap</a>
-          <a href="#" className="hover:text-red-300">Anti-Ragging</a>
+          <Link to="/anti-ragging" className="hover:text-red-300" data-testid="footer-antiragging-link">Anti-Ragging</Link>
         </div>
       </div>
     </div>
