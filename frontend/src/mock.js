@@ -117,8 +117,22 @@ export const megaNav = [
   {
     label: "Campus Life",
     columns: [
-      { title: "Facilities", items: ["Residential", "Transport", "Cafeteria", "Sports", "Library", "Labs & Workshops"] },
-      { title: "Student Life", items: ["Campus Events", "Clubs & Societies", "Cultural Fests", "Student Organizations", "Anti-Ragging", "Grievance Cell"] },
+      { title: "Facilities", items: [
+        { label: "Residential", to: "/campus-life/residential" },
+        { label: "Transport", to: "/campus-life/transport" },
+        { label: "Cafeteria", to: "/campus-life/cafeteria" },
+        { label: "Sports", to: "/campus-life/sports" },
+        { label: "Library", to: "/campus-life/library" },
+        { label: "Labs & Workshops", to: "/campus-life/labs" },
+      ] },
+      { title: "Student Life", items: [
+        { label: "Campus Events", to: "/campus-life/events" },
+        { label: "Clubs & Societies", to: "/campus-life/clubs" },
+        { label: "Cultural Fests", to: "/campus-life/cultural-fests" },
+        { label: "Student Organizations", to: "/campus-life/student-organizations" },
+        { label: "Anti-Ragging", to: "/anti-ragging" },
+        { label: "Grievance Cell", to: "/campus-life/grievance-cell" },
+      ] },
     ],
   },
   {

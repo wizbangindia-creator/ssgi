@@ -17,6 +17,9 @@ import TermsOfService from "@/pages/TermsOfService";
 import AntiRagging from "@/pages/AntiRagging";
 import Programs from "@/pages/Programs";
 import ProgramDetail from "@/pages/ProgramDetail";
+import CampusLife from "@/pages/CampusLife";
+import CampusLifeDetail from "@/pages/CampusLifeDetail";
+import Contact from "@/pages/Contact";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -41,6 +44,10 @@ function App() {
           <Route path="/anti-ragging" element={<AntiRagging />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/programs/:slug" element={<ProgramDetail />} />
+          <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/campus-life/:slug" element={<CampusLifeDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
