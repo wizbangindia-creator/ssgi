@@ -19,6 +19,8 @@ import Programs from "@/pages/Programs";
 import ProgramDetail from "@/pages/ProgramDetail";
 import CampusLife from "@/pages/CampusLife";
 import CampusLifeDetail from "@/pages/CampusLifeDetail";
+import Sports from "@/pages/campus/Sports";
+import Cafeteria from "@/pages/campus/Cafeteria";
 import Contact from "@/pages/Contact";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
@@ -45,6 +47,8 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/programs/:slug" element={<ProgramDetail />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/campus-life/sports" element={<Sports />} />
+          <Route path="/campus-life/cafeteria" element={<Cafeteria />} />
           <Route path="/campus-life/:slug" element={<CampusLifeDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact-us" element={<Contact />} />
