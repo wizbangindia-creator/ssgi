@@ -794,3 +794,189 @@ export const disciplineOrder = [
   "Applied Sciences",
   "Diploma / Polytechnic",
 ];
+
+/* ============ RICH CONTENT HELPERS ============ */
+/**
+ * Discipline-level defaults so every program gets landing-page-quality
+ * content without hand-authoring 37 unique blocks.
+ */
+const KPIS_BY_DISCIPLINE = {
+  "Engineering":            { highPackage: "₹24.5 LPA", avgPackage: "₹5.8 LPA",  placementRate: "92%", recruitersCount: "200+" },
+  "Management":             { highPackage: "₹18.0 LPA", avgPackage: "₹6.2 LPA",  placementRate: "94%", recruitersCount: "180+" },
+  "Computing / IT":         { highPackage: "₹24.5 LPA", avgPackage: "₹5.5 LPA",  placementRate: "93%", recruitersCount: "200+" },
+  "Pharmacy":               { highPackage: "₹9.2 LPA",  avgPackage: "₹3.8 LPA",  placementRate: "89%", recruitersCount: "120+" },
+  "Education":              { highPackage: "₹7.5 LPA",  avgPackage: "₹3.6 LPA",  placementRate: "90%", recruitersCount: "80+"  },
+  "Agriculture":            { highPackage: "₹8.4 LPA",  avgPackage: "₹4.2 LPA",  placementRate: "88%", recruitersCount: "60+"  },
+  "Hotel Management":       { highPackage: "₹9.6 LPA",  avgPackage: "₹4.4 LPA",  placementRate: "91%", recruitersCount: "70+"  },
+  "Applied Sciences":       { highPackage: "₹8.0 LPA",  avgPackage: "₹4.0 LPA",  placementRate: "86%", recruitersCount: "60+"  },
+  "Diploma / Polytechnic":  { highPackage: "₹6.4 LPA",  avgPackage: "₹3.2 LPA",  placementRate: "85%", recruitersCount: "150+" },
+};
+
+const SKILLS_BY_DISCIPLINE = {
+  "Engineering":       ["Analytical thinking", "Design & simulation", "Project management", "Problem solving", "Teamwork", "Industry-grade tools", "Prototyping", "Communication"],
+  "Management":        ["Leadership", "Strategic thinking", "Data-driven decisions", "Communication", "Negotiation", "Financial acumen", "Marketing insight", "Team building"],
+  "Computing / IT":    ["Programming", "System design", "Databases", "Cloud & DevOps", "AI/ML basics", "Cyber security", "Version control (Git)", "Agile methodologies"],
+  "Pharmacy":          ["Drug formulation", "Pharmacology", "Regulatory compliance", "Clinical research", "Lab techniques", "Patient counselling", "Quality assurance"],
+  "Education":         ["Pedagogy design", "Classroom management", "Assessment techniques", "ICT in teaching", "Child psychology", "Curriculum planning"],
+  "Agriculture":       ["Crop management", "Soil science", "Agri-tech tools", "Farm economics", "Extension work", "Sustainable practices"],
+  "Hotel Management":  ["Guest handling", "F&B operations", "Culinary skills", "Front-office management", "Event planning", "Multicultural communication"],
+  "Applied Sciences":  ["Scientific method", "Data analysis", "Instrumentation", "Research writing", "Critical thinking", "Lab safety"],
+  "Diploma / Polytechnic": ["Hands-on technical skills", "Site / workshop safety", "CAD / drafting", "Machinery operation", "Troubleshooting", "Blueprint reading"],
+};
+
+const WHY_SSGI_BY_DISCIPLINE = {
+  "Engineering": [
+    { title: "IBM CoE integration",     copy: "Curriculum aligned with IBM Centre of Excellence and Pearson VUE certifications." },
+    { title: "Industry-grade labs",     copy: "Modern labs equipped with the same tools used in leading MNCs and R&D houses." },
+    { title: "Career Udaan PAP",        copy: "Placement Assurance Programme runs from Year 1 with aptitude, mock interviews & industry mentors." },
+    { title: "Research & patents",      copy: "Active R&D cell, patents and publications by faculty and students every year." },
+  ],
+  "Management": [
+    { title: "Live industry projects",  copy: "Every semester includes real business case studies and consulting assignments with local & national firms." },
+    { title: "Leadership network",      copy: "Guest lectures by CEOs, founders and senior leaders across marketing, finance, HR & operations." },
+    { title: "Dual specialisation",     copy: "Choose two specialisations to become a well-rounded, career-flexible manager." },
+    { title: "Placement drives",        copy: "180+ recruiters visit every year — banking, retail, FMCG, consulting, IT & startups." },
+  ],
+  "Computing / IT": [
+    { title: "IBM & Pearson tracks",    copy: "Industry-integrated tracks in AI/ML, Cloud, Cyber Security, Full-Stack & Data Science." },
+    { title: "Hackathon culture",       copy: "Active coding, hackathon, GitHub & open-source clubs on campus." },
+    { title: "Global certifications",   copy: "Pearson VUE testing centre on campus for AWS, Azure, Google, Microsoft & CompTIA." },
+    { title: "Highest ROI",             copy: "Consistently among SSGI's top-placed streams — up to ₹24.5 LPA offers." },
+  ],
+  "Pharmacy": [
+    { title: "PCI-approved curriculum", copy: "All programmes are PCI-approved and eligible for Pharmacist registration." },
+    { title: "Well-equipped labs",      copy: "Pharmaceutics, Pharmacology, Pharm. Chemistry, Pharmacognosy — all industry-grade." },
+    { title: "GPAT / NIPER prep",       copy: "Faculty-led coaching for GPAT and NIPER JEE alongside regular curriculum." },
+    { title: "Industry MoUs",           copy: "Partnerships with Cipla, Sun Pharma, Alkem, Zydus & more for training & placements." },
+  ],
+  "Education": [
+    { title: "NCTE-approved",           copy: "Programmes fully approved by the National Council for Teacher Education (NCTE)." },
+    { title: "Practicum in real schools", copy: "Extensive teaching practice in reputed CBSE / ICSE & Punjab-Board schools." },
+    { title: "CTET / STET prep",        copy: "Structured preparation for CTET Paper 1 & 2 alongside your degree." },
+    { title: "Modern ed-tech lab",      copy: "ICT and ed-tech lab to prepare you for the modern digital classroom." },
+  ],
+  "Agriculture": [
+    { title: "ICAR-aligned",            copy: "Curriculum aligned to ICAR framework with Rural Agri Work Experience (RAWE)." },
+    { title: "Field & farm exposure",   copy: "Regular visits to KVKs, agri-research stations & progressive farmers' farms." },
+    { title: "Agri-preneurship push",   copy: "Support for agri-startups through incubation, mentorship & funding help." },
+    { title: "Govt. exam readiness",    copy: "Prep support for IBPS-AFO, NABARD Grade A, ICAR ARS and State Agri exams." },
+  ],
+  "Hotel Management": [
+    { title: "5-star industry training", copy: "Industrial exposure with Taj, Oberoi, Marriott, Radisson & other premium hotels." },
+    { title: "Culinary & bakery labs",  copy: "Fully equipped training kitchens, bakery and mocktail lab on campus." },
+    { title: "International placements", copy: "Cruise-line and international hospitality placement opportunities." },
+    { title: "Personality & grooming",  copy: "Structured grooming, communication & guest-handling modules." },
+  ],
+  "Applied Sciences": [
+    { title: "Research-first culture",  copy: "Student-led research projects, publications and paper presentations." },
+    { title: "CSIR-NET / GATE / JAM prep", copy: "Faculty-led coaching for national-level entrance exams." },
+    { title: "Advanced instrumentation", copy: "Access to modern optics, spectroscopy & analytical instruments." },
+    { title: "Pathway to PhD",          copy: "Strong pathway to PhD via UGC-NET, GATE, JEST and international programmes." },
+  ],
+  "Diploma / Polytechnic": [
+    { title: "Lateral entry to B.Tech", copy: "Direct entry to B.Tech 2nd year — a fast track to full engineering degree." },
+    { title: "Industry-grade workshops", copy: "CNC, welding, PCB, 3D-printing, CAD and simulation labs on campus." },
+    { title: "PSBTE + AICTE approved",  copy: "Programmes approved by PSBTE Punjab and AICTE, New Delhi." },
+    { title: "Faster career start",     copy: "Get job-ready in 3 years for technician / junior engineer / CAD roles." },
+  ],
+};
+
+const FAQS_GENERIC = [
+  {
+    q: "How can I apply for this program?",
+    a: "Just fill the application form on our Apply page — it takes under 60 seconds. Our admissions counsellor will call you within 24 hours with the next steps (documents, seat booking, fee payment).",
+  },
+  {
+    q: "Are scholarships available?",
+    a: "Yes. Merit scholarships up to 100% tuition waiver, sports & NCC scholarships, sibling / alumni referral discounts, and government schemes (PMSSS, SC/ST, EWS, OBC) — all applicable subject to eligibility. See our Apply page for the full slab list.",
+  },
+  {
+    q: "Is hostel accommodation available?",
+    a: "Yes. Separate, fully-secured hostels for boys and girls are available on campus with Wi-Fi, mess, laundry, gym and 24×7 warden support. Hostel is optional and priced separately from tuition.",
+  },
+  {
+    q: "Are EMI / education-loan options available for fees?",
+    a: "Yes. We have partnerships with leading NBFCs and PSU banks for education-loan and 0% EMI schemes. Our finance help-desk assists with documentation and end-to-end processing.",
+  },
+  {
+    q: "What is the fee refund policy?",
+    a: "SSGI follows the AICTE / UGC-prescribed refund policy. Withdrawals before class commencement receive a refund minus a nominal processing fee, processed within 15 working days.",
+  },
+];
+
+const FAQS_BY_DISCIPLINE = {
+  "Engineering": [
+    { q: "Do I need a JEE Main score to apply?", a: "JEE Main is preferred but not mandatory for management-quota seats. Direct admissions are open on 10+2 (PCM) merit as per IKGPTU norms." },
+    { q: "Which B.Tech branch has the highest placements?", a: "B.Tech CSE and B.Tech ECE consistently see the highest placement packages (up to ₹24.5 LPA) at SSGI." },
+  ],
+  "Management": [
+    { q: "Do I need CAT / MAT / CMAT for MBA?", a: "Any valid CAT / MAT / CMAT / State CET score is accepted. Direct admissions are open on graduation-merit basis as per IKGPTU norms." },
+    { q: "What specialisations are offered in MBA?", a: "Marketing, Finance, HR, Operations, IT, and Business Analytics — students choose two dual-specialisations in the 2nd year." },
+  ],
+  "Computing / IT": [
+    { q: "Is the curriculum aligned with industry certifications?", a: "Yes — we integrate IBM CoE, Pearson VUE, AWS, Azure, Google Cloud and Microsoft certification tracks alongside the university curriculum." },
+    { q: "Which languages / tools are taught?", a: "Python, Java, JavaScript, C/C++, SQL, HTML/CSS, React, Node.js, Git, Docker, plus AI/ML frameworks and cloud tools." },
+  ],
+  "Pharmacy": [
+    { q: "Is this a PCI-approved programme?", a: "Yes — all our pharmacy programmes are approved by the Pharmacy Council of India (PCI) and eligible for pharmacist registration." },
+    { q: "Do you support GPAT / NIPER preparation?", a: "Yes — dedicated faculty-led GPAT and NIPER-JEE coaching is included as part of the programme." },
+  ],
+  "Education": [
+    { q: "Is this programme NCTE-approved?", a: "Yes — all our education programmes are approved by the National Council for Teacher Education (NCTE)." },
+    { q: "Will I be prepared for CTET / STET?", a: "Yes — structured CTET / STET preparation runs alongside your regular coursework." },
+  ],
+  "Agriculture": [
+    { q: "Is your B.Sc Agriculture programme ICAR-aligned?", a: "Yes — the curriculum follows the ICAR framework and includes Rural Agri Work Experience (RAWE)." },
+    { q: "Which government exams can this prepare me for?", a: "IBPS-AFO, NABARD Grade A, ICAR ARS, and various State Agriculture Officer / Extension Officer exams." },
+  ],
+  "Hotel Management": [
+    { q: "Do I need any prior hospitality experience?", a: "No — we start from the fundamentals. Any 10+2 student with a passion for hospitality can join." },
+    { q: "Are there international placement opportunities?", a: "Yes — SSGI has tie-ups with cruise-lines and international hotel chains for global placements." },
+  ],
+  "Applied Sciences": [
+    { q: "Does the programme prepare me for CSIR-NET / GATE?", a: "Yes — faculty-led coaching and mock tests for CSIR-NET, GATE and JAM are integrated with the curriculum." },
+    { q: "Can I go into a PhD after this?", a: "Absolutely — many of our M.Sc alumni have moved into PhD programmes at IITs, IISc, and reputed foreign universities." },
+  ],
+  "Diploma / Polytechnic": [
+    { q: "Can I pursue B.Tech after this diploma?", a: "Yes — you get lateral entry directly into 2nd year of B.Tech via the LEET route." },
+    { q: "How soon can I start working?", a: "Right after your 3-year diploma. Many students take up junior engineer / technician / CAD-assistant roles or continue with lateral B.Tech." },
+  ],
+};
+
+export const getKpis = (program) => KPIS_BY_DISCIPLINE[program.discipline] || KPIS_BY_DISCIPLINE["Engineering"];
+export const getSkills = (program) => SKILLS_BY_DISCIPLINE[program.discipline] || SKILLS_BY_DISCIPLINE["Engineering"];
+export const getWhySSGI = (program) => WHY_SSGI_BY_DISCIPLINE[program.discipline] || WHY_SSGI_BY_DISCIPLINE["Engineering"];
+export const getFaqs = (program) => [
+  ...(FAQS_BY_DISCIPLINE[program.discipline] || []),
+  ...FAQS_GENERIC,
+];
+
+/**
+ * "Learning outcomes" – succinct promises the program delivers.
+ * We derive from highlights + skills so no per-program authoring is needed.
+ */
+export const getLearningOutcomes = (program) => {
+  const skills = getSkills(program);
+  return [
+    `Master the core technical foundations of ${program.short}.`,
+    `Build a professional portfolio through capstone projects and real-world case studies.`,
+    `Develop industry-relevant skills: ${skills.slice(0, 4).join(", ")}.`,
+    `Prepare for national exams, higher studies or immediate placement in ${program.discipline}.`,
+    `Graduate with confidence, communication and leadership skills for a global career.`,
+  ];
+};
+
+/**
+ * Fee breakdown table.
+ */
+export const getFeeBreakdown = (program) => {
+  const tuition = program.fee.replace("(approx)", "").trim();
+  return [
+    { head: "Tuition Fee", value: tuition, note: "Payable per academic year" },
+    { head: "Registration Fee", value: "₹5,000", note: "One-time, at admission" },
+    { head: "Examination Fee", value: "As per University", note: "Paid to IKGPTU / Panjab Univ." },
+    { head: "Hostel (Optional)", value: "₹65,000 / year", note: "Includes accommodation + mess" },
+    { head: "Transport (Optional)", value: "₹22,000 – ₹35,000", note: "Distance-based slabs" },
+  ];
+};
+
