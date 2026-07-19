@@ -66,10 +66,38 @@ export const megaNav = [
   {
     label: "Programs",
     columns: [
-      { title: "Engineering", items: ["B.Tech CSE", "B.Tech ECE", "B.Tech Mechanical", "B.Tech Civil", "B.Tech Electrical", "M.Tech Programs"] },
-      { title: "Management & IT", items: ["MBA", "BBA", "BCA", "MCA", "B.Sc IT", "M.Sc IT"] },
-      { title: "Pharmacy & Sciences", items: ["B.Pharma", "D.Pharma", "M.Pharma", "B.Pharma (Practice)", "B.Sc Agriculture", "M.Sc Physics/Chem/Math"] },
-      { title: "Education & Diploma", items: ["B.Ed", "M.Ed", "D.El.Ed", "Polytechnic Diplomas", "BHMCT", "B.Com (Prof)"] },
+      { title: "Engineering", items: [
+        { label: "B.Tech CSE", to: "/programs/btech-cse" },
+        { label: "B.Tech ECE", to: "/programs/btech-ece" },
+        { label: "B.Tech Mechanical", to: "/programs/btech-mech" },
+        { label: "B.Tech Civil", to: "/programs/btech-civil" },
+        { label: "B.Tech Electrical", to: "/programs/btech-electrical" },
+        { label: "M.Tech Programs", to: "/programs?filter=Engineering" },
+      ] },
+      { title: "Management & IT", items: [
+        { label: "MBA", to: "/programs/mba" },
+        { label: "BBA", to: "/programs/bba" },
+        { label: "BCA", to: "/programs/bca" },
+        { label: "MCA", to: "/programs/mca" },
+        { label: "B.Sc IT", to: "/programs/bsc-it" },
+        { label: "M.Sc IT", to: "/programs/msc-it" },
+      ] },
+      { title: "Pharmacy & Sciences", items: [
+        { label: "B.Pharma", to: "/programs/b-pharma" },
+        { label: "D.Pharma", to: "/programs/d-pharma" },
+        { label: "M.Pharma", to: "/programs/m-pharma" },
+        { label: "B.Pharma (Practice)", to: "/programs/b-pharma-practice" },
+        { label: "B.Sc Agriculture", to: "/programs/bsc-agri" },
+        { label: "M.Sc Physics/Chem/Math", to: "/programs" },
+      ] },
+      { title: "Education & Diploma", items: [
+        { label: "B.Ed", to: "/programs/b-ed" },
+        { label: "M.Ed", to: "/programs/m-ed" },
+        { label: "D.El.Ed", to: "/programs/d-el-ed" },
+        { label: "Polytechnic Diplomas", to: "/programs" },
+        { label: "BHMCT", to: "/programs/bhmct" },
+        { label: "B.Com (Prof)", to: "/programs/bcom-prof" },
+      ] },
     ],
   },
   {

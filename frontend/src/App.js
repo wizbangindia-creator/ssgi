@@ -15,6 +15,8 @@ import Apply from "@/pages/Apply";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import AntiRagging from "@/pages/AntiRagging";
+import Programs from "@/pages/Programs";
+import ProgramDetail from "@/pages/ProgramDetail";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/anti-ragging" element={<AntiRagging />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/:slug" element={<ProgramDetail />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
