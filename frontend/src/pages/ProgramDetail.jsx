@@ -12,6 +12,7 @@ import {
   getFeeBreakdown,
 } from "@/data/programs";
 import { Button } from "@/components/ui/button";
+import ProgramEnquiryForm from "@/components/site/ProgramEnquiryForm";
 import {
   Accordion,
   AccordionContent,
@@ -48,6 +49,7 @@ const TABS = [
   { id: "outcomes",    label: "Learning Outcomes" },
   { id: "placements",  label: "Careers & Placements" },
   { id: "fees",        label: "Fees & Scholarships" },
+  { id: "enquire",     label: "Enquire" },
   { id: "faqs",        label: "FAQs" },
 ];
 
@@ -233,11 +235,15 @@ const ProgramDetail = () => {
                 )}
               </button>
             ))}
-            <Link to="/apply" className="ml-auto shrink-0">
-              <Button className="h-9 bg-red-600 hover:bg-red-700 text-white font-extrabold uppercase text-[11px] tracking-wider">
-                Apply <ArrowRight className="w-3.5 h-3.5 ml-1" />
-              </Button>
-            </Link>
+            <button
+              onClick={() => scrollTo("enquire")}
+              className="ml-auto shrink-0"
+              data-testid="program-tab-enquire-cta"
+            >
+              <span className="inline-flex items-center h-9 px-4 rounded-md bg-red-600 hover:bg-red-700 text-white font-extrabold uppercase text-[11px] tracking-wider">
+                Enquire <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -289,47 +295,13 @@ const ProgramDetail = () => {
             </div>
           </div>
 
-          {/* Sticky apply sidebar */}
+          {/* Sticky enquiry sidebar */}
           <aside className="lg:col-span-4">
-            <div className="lg:sticky lg:top-40">
-              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
-                <div className="bg-gradient-to-r from-red-600 via-rose-600 to-orange-500 px-5 py-4 text-white">
-                  <div className="text-[10px] uppercase tracking-widest font-bold opacity-90">Admissions 2026</div>
-                  <div className="text-lg font-extrabold leading-tight">Reserve your seat in {program.short}</div>
-                </div>
-                <div className="p-5 md:p-6 bg-white space-y-4">
-                  <div className="text-sm text-slate-600 leading-relaxed">
-                    Scholarships up to <strong className="text-slate-900">100%</strong> for meritorious students &middot;
-                    EMI-friendly fees &middot; Placement assurance from Year 1.
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 text-center text-xs">
-                    <div className="rounded-lg bg-slate-50 p-3">
-                      <div className="text-slate-500 uppercase tracking-widest font-bold text-[10px]">Duration</div>
-                      <div className="mt-1 font-extrabold text-slate-900">{program.duration.split(" (")[0]}</div>
-                    </div>
-                    <div className="rounded-lg bg-slate-50 p-3">
-                      <div className="text-slate-500 uppercase tracking-widest font-bold text-[10px]">Seats</div>
-                      <div className="mt-1 font-extrabold text-slate-900">{program.seats}</div>
-                    </div>
-                  </div>
-                  <Link to="/apply" className="block">
-                    <Button className="w-full h-11 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold uppercase tracking-wider">
-                      Start Application <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                  <div className="grid grid-cols-2 gap-2">
-                    <a href="tel:18001218427" className="text-center rounded-lg border border-slate-200 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50">
-                      <Phone className="w-3.5 h-3.5 inline mr-1" /> Call
-                    </a>
-                    <a href="https://wa.me/919418001818" target="_blank" rel="noreferrer" className="text-center rounded-lg border border-emerald-200 bg-emerald-50 py-2.5 text-xs font-bold text-emerald-700 hover:bg-emerald-100">
-                      <MessageCircle className="w-3.5 h-3.5 inline mr-1" /> WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="lg:sticky lg:top-40 space-y-6">
+              <ProgramEnquiryForm program={program} variant="compact" />
 
               {related.length > 0 && (
-                <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+                <div className="rounded-2xl border border-slate-200 bg-white p-5">
                   <div className="text-[10px] uppercase tracking-widest text-red-700 font-bold mb-3">
                     Related in {program.discipline}
                   </div>
@@ -543,6 +515,41 @@ const ProgramDetail = () => {
                 * Indicative. Final fee is governed by AICTE / IKGPTU / affiliating body notifications for AY 2026.
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ INLINE ENQUIRY (WIDE) ============ */}
+      <section id="enquire" className="bg-slate-950 text-white py-14 md:py-20 relative overflow-hidden scroll-mt-32" data-testid="program-enquiry-section">
+        <div className="absolute -top-20 -right-16 w-80 h-80 rounded-full bg-red-600/25 blur-3xl" />
+        <div className="absolute -bottom-16 -left-20 w-96 h-96 rounded-full bg-orange-500/15 blur-3xl" />
+        <div className="relative max-w-[1400px] mx-auto px-4 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6">
+            <div className="text-[11px] uppercase tracking-widest text-red-300 font-bold mb-2">Quick Query</div>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+              Have a question about <span className="text-red-400">{program.short}</span>?
+            </h2>
+            <p className="mt-4 text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
+              Ask us anything &mdash; eligibility, fees, scholarships, hostel, placements, curriculum, or the admission
+              process. Our counsellor will call you back within 24 hours with tailored answers for this programme.
+            </p>
+            <ul className="mt-6 space-y-2.5">
+              {[
+                "Personal counsellor for your journey",
+                "Scholarship eligibility check",
+                "Hostel & transport queries",
+                "0% EMI &amp; education-loan guidance",
+              ].map((x) => (
+                <li key={x} className="flex items-start gap-2 text-slate-200 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
+                  <span dangerouslySetInnerHTML={{ __html: x }} />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-6">
+            <ProgramEnquiryForm program={program} variant="wide" />
           </div>
         </div>
       </section>
