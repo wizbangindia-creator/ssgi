@@ -3,21 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 
 const PageHero = ({ eyebrow, title, subtitle, breadcrumb = [] }) => (
-  <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-14 md:py-20">
-    <div
-      className="absolute inset-0 opacity-25"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at 15% 20%, rgba(220,38,38,0.35), transparent 45%), radial-gradient(circle at 85% 85%, rgba(220,38,38,0.25), transparent 50%)",
-      }}
-    />
-    <div
-      className="absolute inset-0 opacity-[0.06]"
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(45deg, #ffffff 0 1px, transparent 1px 22px)",
-      }}
-    />
+  <section className="relative overflow-hidden bg-slate-950 text-white py-14 md:py-20 border-b border-white/5">
     <div className="relative max-w-[1400px] mx-auto px-4">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs md:text-sm text-slate-300 mb-4 md:mb-5">

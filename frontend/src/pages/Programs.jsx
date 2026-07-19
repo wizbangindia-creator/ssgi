@@ -136,21 +136,9 @@ const Programs = () => {
     <PageLayout>
       {/* ============ HERO ============ */}
       <section
-        className="relative overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(1000px 500px at 15% -10%, rgba(239,68,68,0.35), transparent 60%), radial-gradient(900px 500px at 100% 10%, rgba(249,115,22,0.25), transparent 60%), linear-gradient(180deg, #0b1220 0%, #0f172a 100%)",
-        }}
+        className="relative overflow-hidden bg-slate-950"
         data-testid="programs-hero"
       >
-        <div
-          className="absolute inset-0 opacity-[0.08] pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
         <div className="relative max-w-[1400px] mx-auto px-4 pt-12 md:pt-20 pb-16 md:pb-20">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-slate-300 mb-6">
