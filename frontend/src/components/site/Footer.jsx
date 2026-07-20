@@ -11,7 +11,7 @@ const Footer = () => (
       {/* Top row: brand + description */}
       <div className="grid md:grid-cols-12 gap-8 pb-10 border-b border-white/10">
         <div className="md:col-span-4">
-          <div className="flex items-center gap-3 mb-4 bg-white/95 rounded-lg p-3 inline-flex w-auto">
+          <div className="mb-4">
             <img src={brand.logo} alt={brand.name} className="h-14 w-auto object-contain" />
           </div>
           <p className="text-sm leading-relaxed text-slate-400 max-w-md mt-4">
