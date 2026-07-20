@@ -23,6 +23,8 @@ import Sports from "@/pages/campus/Sports";
 import Cafeteria from "@/pages/campus/Cafeteria";
 import Contact from "@/pages/Contact";
 import Careers from "@/pages/Careers";
+import Colleges from "@/pages/Colleges";
+import CollegeDetail from "@/pages/CollegeDetail";
 import ScrollToTop from "@/components/site/ScrollToTop";
 
 function App() {
@@ -55,6 +57,8 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/career" element={<Careers />} />
+          <Route path="/colleges" element={<Colleges />} />
+          <Route path="/colleges/:slug" element={<CollegeDetail />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
