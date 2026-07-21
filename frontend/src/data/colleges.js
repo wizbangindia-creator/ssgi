@@ -93,6 +93,29 @@ export const colleges = [
       "msc-it", "msc-physics", "msc-chemistry",
     ],
   },
+  {
+    slug: "polytechnic-college",
+    name: "Sai Polytechnic College",
+    short: "SPC",
+    tagline: "PSBTE / AICTE-approved diploma programmes with lateral-entry pathway to B.Tech.",
+    intro:
+      "Sai Polytechnic College is SSGI's dedicated polytechnic wing offering 3-year diploma engineering programmes. Fully approved by Punjab State Board of Technical Education (PSBTE) and AICTE, our diploma programmes give students a fast, hands-on route to junior engineer / technician roles — or lateral entry directly into the 2nd year of B.Tech.",
+    principal: {
+      name: "Principal — To be announced",
+      role: "Head of Polytechnic",
+    },
+    approvals: ["PSBTE Punjab", "AICTE, New Delhi"],
+    stats: [
+      { label: "Programmes",  value: "8" },
+      { label: "Total Seats", value: "400+" },
+      { label: "Lateral Entry to B.Tech", value: "Yes" },
+      { label: "Placements",  value: "85%" },
+    ],
+    programSlugs: [
+      "diploma-civil", "diploma-mech", "diploma-cse", "diploma-ece",
+      "diploma-electrical", "diploma-automobile", "diploma-architecture", "diploma-pharmacy",
+    ],
+  },
 ];
 
 export const getCollege = (slug) => colleges.find((c) => c.slug === slug);

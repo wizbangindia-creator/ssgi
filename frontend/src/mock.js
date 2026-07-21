@@ -136,6 +136,7 @@ export const megaNav = [
         { label: "Sri Sai College of Pharmacy",        to: "/colleges/college-of-pharmacy" },
         { label: "Sri Sai College of Education",       to: "/colleges/college-of-education" },
         { label: "Sri Sai Iqbal College of Mgmt & IT", to: "/colleges/iqbal-college" },
+        { label: "Sai Polytechnic College",            to: "/colleges/polytechnic-college" },
         { label: "All Colleges",                       to: "/colleges" },
       ] },
       { title: "Academic Support", items: ["E-Content", "NPTEL", "Spoken Tutorial", "Virtual Labs", "Pearson VUE", "Career Udaan"] },
